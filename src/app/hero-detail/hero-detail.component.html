@@ -4,6 +4,12 @@
   <div>
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name" />
+    <p>About : {{ hero.desc }}</p>
   </div>
-  <button (click)="goBack()">go back</button>
+  <button (click)="goBack()">Back</button>
+  <mat-dialog-actions>
+    <button mat-raised-button (click)="openDialog()">Open dialog</button>
+  </mat-dialog-actions>
 </div>
+
+<ng-template #abc> abc </ng-template>

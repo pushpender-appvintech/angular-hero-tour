@@ -1,0 +1,15 @@
+<div style="padding: 20px">
+  <form [formGroup]="newHero" (ngSubmit)="onSubmit()">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" [(ngModel)]="newName" />
+
+    <label for="desc">Description</label>
+    <input id="desc" formControlName="desc" />
+    <!-- <p>New Hero: {{ name.value }}</p> -->
+
+    <p>Form Value: {{ newHero.value | json }}</p>
+
+    <button type="button" (click)="updateHero()">Add Hero</button>
+    <!-- <button type="submit" [disabled]="!newHero.valid">Submit</button> -->
+  </form>
+</div>
